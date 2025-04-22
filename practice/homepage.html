@@ -1,35 +1,197 @@
+
 <html>
 <head>
-    <title>My Practice Page</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-</head> 
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  font-family: 'Montserrat', sans-serif;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #528aae;
+}
+</style>
+</head>
 <body>
-    <nav style="background-color: palegoldenrod;">
-        <ul style="display: flex; padding: 10px; list-style-type: none;" alignment ="center">
 
-            <li style="padding: 10px;">Home</li>
-            <li style="padding: 10px;"> Services</li>
-            <li style="padding: 10px;">About</li>
-            <li style="padding: 10px;">Contact</li>
-            <li style="padding: 10px; text-align: right; ">Login/Register</li>
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#services">Sevices</a></li>
+  <li><a href="#about">About</a></li>
+  <li style="float:right"><a class="active" href="#Login/Register">Login/Register</a></li>
+</ul>
+<style>
+    .hero-banner {
+      position: relative;
+      width: 100%;
+      max-height: 300px;
+      overflow: hidden;
+    }
+  
+    .hero-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  
+    .hero-title {
+      position: absolute;
+      top: 100px;
+    left: 10px;
+    right: 10px;
+    color: white;
+    padding: 8px 16px;
+    font-size: 2rem;
+    font-family: Montserrat, sans-serif;
+    text-align: center;
+    white-space: autowrap;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+  </style>
+  
+  <div class="hero-banner">
+    <img src="https://www.healthcareitnews.com/sites/hitn/files/Data%20Tsunmai-HITN.png" alt="Data Tsunami">
+    <div class="hero-title">Your Health Data Management System</div>
+  </div>
+
+  <!-- Service Title Section -->
+  <div class="service-title-container">
+    <div class="service-title-box">Data Security</div>
+    <div class="service-title-box">Advanced Analytics</div>
+    <div class="service-title-box">System Integration</div>
+    <div class="service-title-box">24/7 Support</div>
+  </div>
+  <style>
+    .service-title-container {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      margin-top: 20px;
+      gap: 20px; 
+    }
+  
+    .service-title-box {
+      background-color: #528aae;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.5rem;
+      font-family: Montserrat, sans-serif;
+      border-radius: 8px;
+      width: 50%; 
+      margin-bottom: 20px;
+    }
+  
+    @media (max-width: 768px) {
+      .service-title-box {
+        width: 100%; /* Stacks the boxes vertically on smaller screens */
+      }
+    }
+  </style>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+      <!-- Column 1: Contact Info and Site Map -->
+      <div class="footer-column">
+        <p>&copy; 2025 Your Company Name. All Rights Reserved.</p>
+        <p><strong>Phone:</strong> +1 234 567 890</p>
+        <p><strong>Email:</strong> contact@yourcompany.com</p>
+        <ul>
+          <li><a href="#">Site Map</a></li>
         </ul>
-    </nav>
-    <main>
-        <section id="section1">
-            <h2>Furniture Moving</h2>
-            <p>This is the first section of my practice page.</p>
-        </section>
-        <section id="section2">
-            <h2>Commercial Cleaning</h2>
-            <p>This is the second section of my practice page.</p>
-        </section>
-        <section id="section3">
-            <h2>Data Mining</h2>
-            <p>This is the third section of my practice page.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 My Practice Page</p>
-    </footer>
-
+      </div>
+      
+      <!-- Column 2: Social Media Links -->
+      <div class="footer-column">
+        <ul class="social-media-links">
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  
+  <style>
+    .footer {
+      background-color: #333;
+      color: white;
+      padding: 30px 20px;
+      font-family: Arial, sans-serif;
+    }
+  
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      flex-wrap: wrap; /* Allow columns to wrap if needed on smaller screens */
+    }
+  
+    .footer-column {
+      flex: 1;
+      padding: 10px;
+      min-width: 200px;
+    }
+  
+    .footer-column p {
+      margin: 10px 0;
+    }
+  
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+  
+    .footer-column ul li {
+      margin: 5px 0;
+    }
+  
+    .footer-column a {
+      color: #fff;
+      text-decoration: none;
+    }
+  
+    .footer-column a:hover {
+      text-decoration: underline;
+    }
+  
+    /* Responsive Styling */
+    @media (max-width: 768px) {
+      .footer-container {
+        flex-direction: column;
+        align-items: center;
+      }
+  
+      .footer-column {
+        text-align: center;
+        margin-bottom: 15px;
+      }
+    }
+  </style>
+  
+</body>
+</html>
